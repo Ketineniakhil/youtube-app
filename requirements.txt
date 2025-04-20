@@ -10,7 +10,6 @@ gTTS
 transformers
 nltk
 spacy
-en-core-web-sm
 sumy
 pandas
 plotly
