@@ -1,0 +1,16 @@
+streamlit
+pathvalidate
+streamlit-option-menu
+beautifulsoup4
+requests
+youtube-transcript-api
+pytube
+deep-translator
+gTTS
+transformers
+nltk
+spacy
+en-core-web-sm
+sumy
+pandas
+plotly
