@@ -29,4 +29,4 @@ plotly==6.0.1
 pathvalidate==3.2.3
 
 # spaCy English model (downloaded via URL)
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.2.0/en_core_web_sm-3.2.0.tar.gz
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.2.0/en_core_web_sm-3.2.0-py3-none-any.whl
