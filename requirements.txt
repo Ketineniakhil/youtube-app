@@ -8,7 +8,7 @@ requests==2.31.0
 
 # NLP/Summarization
 nltk==3.7
-spacy>=3.5.0,<3.6.0
+spacy==3.2.6
 sumy==0.11.0
 transformers==4.36.2
 torch==2.0.1
@@ -29,4 +29,4 @@ plotly==6.0.1
 pathvalidate==3.2.3
 
 # spaCy English model (downloaded via URL)
-en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0-py3-none-any.whl
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.2.0/en_core_web_sm-3.2.0.tar.gz
