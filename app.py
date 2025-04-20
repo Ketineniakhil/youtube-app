@@ -33,8 +33,13 @@ import time
 nltk.download('punkt', quiet=True)
 nltk.download('stopwords', quiet=True)
 
-import spacy
-nlp = spacy.load("en_core_web_sm")
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    from spacy.cli import download
+    print("Downloading spaCy model...")
+    download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
 
 # Setup page config
 st.set_page_config(
