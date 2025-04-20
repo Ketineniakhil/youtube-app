@@ -18,7 +18,6 @@ import nltk
 from string import punctuation
 from heapq import nlargest
 import spacy
-import en_core_web_sm
 import math
 from nltk import sent_tokenize, word_tokenize, PorterStemmer
 from nltk.corpus import stopwords
