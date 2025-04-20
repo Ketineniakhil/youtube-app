@@ -8,7 +8,7 @@ requests==2.31.0
 
 # NLP/Summarization
 nltk==3.7
-spacy==3.2.6
+spacy>=3.5.0,<3.6.0
 sumy==0.11.0
 transformers==4.36.2
 torch==2.0.1
