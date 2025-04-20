@@ -18,6 +18,7 @@ import nltk
 from string import punctuation
 from heapq import nlargest
 import spacy
+import en_core_web_sm
 import math
 from nltk import sent_tokenize, word_tokenize, PorterStemmer
 from nltk.corpus import stopwords
@@ -33,13 +34,7 @@ import time
 nltk.download('punkt', quiet=True)
 nltk.download('stopwords', quiet=True)
 
-try:
-    nlp = spacy.load("en_core_web_sm")
-except OSError:
-    from spacy.cli import download
-    print("Downloading spaCy model...")
-    download("en_core_web_sm")
-    nlp = spacy.load("en_core_web_sm")
+
 
 # Setup page config
 st.set_page_config(
@@ -199,7 +194,13 @@ def nltk_summarize(text_content, percent):
     return summary
 
 # Spacy Summarization
-nlp = en_core_web_sm.load()
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    print("Downloading spaCy model...")
+    from spacy.cli import download
+    download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
 def spacy_summarize(text_content, percent):
     stop_words = list(spacy.lang.en.stop_words.STOP_WORDS)
     punctuation_items = punctuation + '\n'
