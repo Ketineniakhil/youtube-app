@@ -34,14 +34,7 @@ nltk.download('punkt', quiet=True)
 nltk.download('stopwords', quiet=True)
 
 import spacy
-# Instead of importing en_core_web_sm directly, we'll load it through spacy
-try:
-    nlp = spacy.load("en_core_web_sm")
-except OSError:
-    import sys
-    import subprocess
-    subprocess.check_call([sys.executable, "-m", "spacy", "download", "en_core_web_sm"])
-    nlp = spacy.load("en_core_web_sm")
+nlp = spacy.load("en_core_web_sm")
 
 # Setup page config
 st.set_page_config(
